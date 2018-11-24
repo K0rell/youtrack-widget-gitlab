@@ -1,0 +1,23 @@
+{
+  "key": "gitlab-deployments-widget",
+  "version": "1.0.0",
+  "name": "Gitlab deployments list",
+  "description": "Displays a list of gitlab project deployments.",
+  "author": "anonymous",
+  "iconUrl": "gitlab.ico",
+  "capabilities": {
+    "topNavigation": true,
+    "popups": true
+  },
+  "dependencies": {
+    "Hub": ">=2017.4"
+  },
+  "products": {
+    "Hub": ">=2018.1",
+    "YouTrack": ">=2018.1"
+  },
+  "view": {
+    "defaultWidth": 2,
+    "defaultHeight": 2
+  }
+}

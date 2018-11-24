@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base target="_parent">
+    <!-- Default styles of dashboard widgets -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/hub-dashboard-addons@latest/dashboard.css">
+    <!-- Include dashboard connector from CDN -->
+    <script src="https://unpkg.com/hub-dashboard-addons@latest"></script>
+    <script src="https://unpkg.com/moment@2.22.2/min/moment.min.js"></script>
+
+    <style>
+        html {
+            height: 100%
+        }
+        a {
+            text-decoration: none;
+            color: rgb(57, 115, 157);
+        }
+
+        h2 {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #gtlbFeed {
+            height: 100%;
+            width: 100%;
+        }
+
+        .gtlbInput {
+            float: right;
+        }
+
+        .gtlbInput {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .gtlbButton {
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .gtlbQuestion {
+            margin-top: 6px;
+        }
+
+        .gtlbQuestion button {
+            background: none;
+            border:none;
+        }
+
+        .gtlbsuccess {
+            color: green;
+        }
+
+        .gtlbfail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="gtlbSettings" hidden="true">
+    <div><input type='text' id='domain' class="gtlbInput" placeholder='https://gitlab.com or https://gitlab.customdomain.com'></div>
+    <div><input type='text' id='privateToken' class="gtlbInput" placeholder='Your Gitlab private token'></div>
+    <div><input type='number' id='projectId' class="gtlbInput" placeholder='Gitlab project ID'></div>
+    <div><input type='text' id='sortDeploy' class="gtlbInput" placeholder='asc / desc (default)'></div>
+    <div>
+        <input type='button' id='save' class="gtlbButton" value='Save'>
+        <input type='button' id='cancel' class="gtlbButton" value='Cancel'>
+    </div>
+</div>
+<div id="gtlbFeed">
+    <div id="gtlbFeedInfo"></div>
+    <div id="gtlbFeedContent"></div>
+</div>
+<script src="loader.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
